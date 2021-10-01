@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			boby{
+				perspective: 1000px;
+				/* perspective-origin: top; */
+			}
+			.box{
+				transform-style: preserve-3d;
+				position: fixed;
+				left: 50%;
+				/* top: 50%; */
+				margin-left: -400px;
+				/* margin-top: -400px; */
+				width: 800px;
+				height: 800px;
+				/* border: 1px solid; */
+				transform: rotateX(-30deg) rotateY(50deg);
+				animation: da 3s linear infinite alternate;
+			}
+			.box .a{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				/* border: 1px solid; */
+				font-size: 150px;
+				text-align: center;
+				line-height: 200px;
+				left: 50%;
+				top: 50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				/* opacity: .5; */
+			}
+			.box .a1{
+				background: red;
+				transform: translateZ(100px);
+				/* transform: translateZ(-100px); */
+			}
+			/* .box:hover .a1{
+				box-shadow: 0px 0px 10px red;
+			}  加个阴影*/
+			.box .a2{
+				background:green ;
+				/* transform: translateZ(-50px); */
+				transform: rotateY(180deg) translateZ(100px);
+			}
+			.box .a3{
+				background: blue;
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			.box .a4{
+				background: yellow;
+				/* transform: translateZ(50px); */
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			.box .a5{
+				background: pink;
+				/* transform: translateZ(100px)	; */
+			transform: rotateY(90deg) translateZ(100px);
+				
+			}
+			.box .a6{
+				background: purple;
+				/* transform: translateZ(150px); */
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			.box .b{
+				position: absolute;
+				width: 400px;
+				height: 400px;
+				border: 1px solid;
+				background-color: gainsboro;
+				font-size: 90px;
+				line-height: 400px;
+				text-align: center;
+				top: 400px;
+				left:400px ;
+				margin-top:-200px ;
+				margin-left: -200px;
+				opacity: .5;
+			}
+			.box .b1{
+				transform: rotateX(90deg) translateZ(200px);
+				/* animation: b1 3s linear infinite alternate; */
+				transition: 3s 1s;
+			}
+			.box .b2{
+				transform: rotateX(90deg) translateZ(-200px);
+				/* animation: b2 3s linear infinite alternate; */
+				transition: 3s 1s;
+			}
+			.box .b3{
+				transform: rotateY(90deg) translateZ(200px);
+				/* animation: b3 3s linear infinite alternate; */
+				transition: 3s 1s;
+			}
+			.box .b4{
+				transform: rotateY(90deg) translateZ(-200px);
+				/* animation: b4 3s linear infinite alternate; */
+				transition: 3s 1s;
+			}
+			.box .b5{
+				transform: translateZ(200px);
+				/* animation: b5 3s linear infinite alternate; */
+				transition: 3s 1s;
+			}
+			.box .b6{
+				transform: translateZ(-200px);
+				/* animation: b6 3s linear infinite alternate; */
+				transition: 3s 1s;
+				
+			}
+			.box:hover .b1{
+				transform:rotateX(90deg) translateZ(260px) ;
+			}
+			.box:hover .b2{
+				transform: rotateX(90deg) translateZ(-260px);
+			}
+			.box:hover .b3{
+				transform: rotateY(90deg) translateZ(260px);
+			}
+			.box:hover .b4{
+				transform: rotateY(90deg) translateZ(-260px);
+			}
+			.box:hover .b5{
+				transform: translateZ(260px);
+			}
+			.box:hover .b6{
+				transform: translateZ(-260px);
+			}
+		 	/* @keyframes b1{
+				from{
+					transform: rotateX(90deg) translateZ(200px);
+				}
+				to{
+					transform: rotateX(90deg) translateZ(260px);
+				} 
+			}
+			@keyframes b2{
+				from{
+					transform: rotateX(90deg) translateZ(-200px);
+				}
+				to{
+					transform: rotateX(90deg) translateZ(-260px);
+				}
+			}
+			@keyframes b3{
+				from{
+					transform: rotateY(90deg) translateZ(200px);
+				}
+				to{
+					transform: rotateY(90deg) translateZ(260px);
+				}
+			}
+			@keyframes b4{
+				from{
+					transform: rotateY(90deg) translateZ(-200px);
+				}
+				to{				transform: rotateY(90deg) translateZ(-260px);
+				}
+			}
+			@keyframes b5{
+				from{				transform: translateZ(200px);}
+				to{				transform: translateZ(260px);}
+			}
+			@keyframes b6{
+				from{				transform: translateZ(-200px);}
+				to{				transform: translateZ(-260px);}
+			} */
+			@keyframes da{
+				from{
+							transform: rotateX(-30deg) rotateY(50deg);
+				}
+				to{				transform: rotateX(-180deg) rotateY(180deg);}
+			} 
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="a a1"></div>
+			<div class="a a2"></div>
+			<div class="a a3"></div>
+			<div class="a a4"></div>
+			<div class="a a5"></div>
+			<div class="a a6"></div>
+			<div class="b b1"><!-- 上 --></div>
+			<div class="b b2"><!-- 下 --></div>
+			<div class="b b3"><!-- 左 --></div>
+			<div class="b b4"><!-- 右 --></div>
+			<div class="b b5"><!-- 前 --></div>
+			<div class="b b6"><!-- 后 --></div>
+		</div>
+	</body>
+</html>
