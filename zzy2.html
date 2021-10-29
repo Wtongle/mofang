@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			document.write('<h2>第一题</h2>')
+			{
+			function reverseString(str){
+				return str.split('').reverse().join('');
+			}
+			document.write(reverseString('a.b.c.d'));
+			}
+			document.write('<hr>');
+			document.write('<h2>第二题</h2>');
+			{
+			let  dier='10.111.222.333';
+			let  aq=dier.split('.');
+			for(let i=0;i<=aq.length-1;i++){
+				if(i===aq.length-1){
+					aq[i]='*';
+				}
+			}
+			document.write(aq);
+			}
+			document.write('<hr>');
+			document.write('<h2>第三题</h2>');
+			{
+			let d=new Date();
+			document.write(`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日,${d.getHours()}:${d.getMinutes()}:${d.getSeconds()},星期${d.getDay()}`);
+			}
+			document.write('<hr>');
+			document.write('<h2>第四题</h2>');
+			{
+			document.write('<input  type="text" value="">');
+			document.write('<button>按钮</button>');
+			document.write('<p></p>');
+			const input=document.querySelector('input');
+			const button=document.querySelector('button');
+			let p1=document.querySelector('p');
+			button.addEventListener('click',function(){
+				if(input.value.length<=10&&input.value.length>=2){
+					 p1.textContent='字符串长度符合要求';
+				}else{
+					p1.textContent='字符串长度不符合要求';
+				}
+			});
+			}
+			document.write('<hr>');
+			document.write('<h2>第五题</h2>');
+			{
+			let str1 = "1234567890";
+			let diwu = str1.split("");
+			let result = "";
+			for(let i=0;i<4;i++)
+			{
+			let n = Math.floor(Math.random() * diwu.length);
+			result += diwu[n];
+			}
+			document.write(result);
+			}
+			document.write('<hr>');
+			document.write('<h2>第六题</h2>');
+			{
+			document.write('<input type="text" value="" id="asd">')
+			document.write('<select id="zxc"> <option value="+">+</option><option value="-">-</option><option value="*">*</option><option value="/">/</option></select>')
+			document.write('<input type="text" value="" id="iop"> ');
+			document.write('<button id="anniu">=</button>');
+			document.write('<input type="text" value="" id="jkl">');
+			let aaa=document.querySelector('#asd');
+			let bbb=document.querySelector('#zxc');
+			// let c=document.querySelector('#c');
+			// let d=document.querySelector('#d');
+			// let e=document.querySelector('#e');
+			let fff=document.querySelector('#iop');
+			let ggg=document.querySelector('#jkl');
+			let button1=document.querySelector('#anniu');
+			button1.addEventListener('click',function(){
+				if(bbb.value==='+'){
+					ggg.value=Number(aaa.value)+Number(fff.value);
+				}else if(bbb.value==='-'){
+					ggg.value=Number(aaa.value)-Number(fff.value);
+				}else if(bbb.value==='*'){
+					ggg.value=Number(aaa.value)*Number(fff.value);
+				}else if(bbb.value==='/'){
+					ggg.value=Number(aaa.value)/Number(fff.value);
+				}
+			});
+			}
+			document.write('<hr>');
+			document.write('<h2>第七题</h2>');
+			{
+			document.write('<p id="pp"></p>');
+			function qwe(){
+				let pp=document.querySelector('#pp');
+			let d=new Date();
+			pp.textContent=(`${d.getFullYear()}年${d.getMonth()}月${d.getDate()}日,${d.getHours()}:${d.getMinutes()}:${d.getSeconds()},星期${d.getDay()}`);
+			}
+			qwe();
+			setInterval(qwe,1000);
+			}
+			document.write('<hr>');
+			
+		</script>
+	</body>
+</html>
